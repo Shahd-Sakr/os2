@@ -11,7 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "printing path"
-        run: pwd
-      - name: "priniting name"
-        run: echo shahd
+      - name: "priniting file before"
+        run: ls
+      
+      - uses: actions/checkout@v3
+
+      - name: "priniting files after"
+        run: ls
