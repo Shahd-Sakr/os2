@@ -11,10 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "priniting file before"
-        run: ls
       
       - uses: actions/checkout@v3
 
-      - name: "priniting files after"
-        run: ls
+      - name: "docker login"
+        run: docker login --username ${{ secrets.DOCKER USERNAME}} --password ${{ secrets.DOCKER_TOKEN}}
+
+      - name: "buliding image"
+        run: dockerbuild -t ${{ secrets.DOCKER USERNAME}}/os .
+
+      - name: "push to dockerhub"
+        run: docker push ${{ secrets.DOCKER USERNAME}}/os
