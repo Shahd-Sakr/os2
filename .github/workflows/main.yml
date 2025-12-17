@@ -1,1 +1,24 @@
+on:
+  push
+    branches:
+      - master
 
+
+
+
+
+
+
+
+
+
+
+jobs:
+  build:
+    run-on: ubuntu-latest
+
+    steps:
+      - name: "printing path"
+        run: pwd
+      - name: "priniting name"
+        run: echo shahd
