@@ -1,14 +1,7 @@
 on:
-  push
+  push:
     branches:
       - master
-
-
-
-
-
-
-
 
 
 
